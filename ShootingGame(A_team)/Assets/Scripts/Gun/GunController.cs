@@ -55,6 +55,7 @@ public class GunController : MonoBehaviour
 		else if(remainBullet<=0)
         {
 			equippedGun.fireEffect.SetActive(false);
+			bulletText.color = Color.red;
 			Reload();
         }
 	}
@@ -88,6 +89,7 @@ public class GunController : MonoBehaviour
 	public void Reloading()
     {
 		remainBullet = maxBullet;
+		bulletText.color = Color.yellow;
 		can_shot = true;
 	}
 }

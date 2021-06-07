@@ -13,7 +13,7 @@ public class ShellPool : ScriptableObject
         if (poolInstanceQueue.Count > 0)
         {
             Shell instanceToUse = poolInstanceQueue.Dequeue();
-            //Debug.Log(poolInstanceQueue.Count);
+            Debug.Log(poolInstanceQueue.Count);
             instanceToUse.gameObject.SetActive(true);
             return instanceToUse;
         }
